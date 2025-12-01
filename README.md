@@ -6,6 +6,9 @@
 
 Backend desenvolvido em **Node.js** utilizando **arquitetura orientada a objetos** para gerenciamento de produtos e reservas.
 
+Bruno Donadei Manfredini 11222101488
+Gustavo Soares Ferreira 11222101537
+
 ---
 
 ## Funcionalidades
