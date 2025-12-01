@@ -25,7 +25,6 @@ Backend desenvolvido em **Node.js** utilizando **arquitetura orientada a objetos
 - SQLite3
 - UUID para IDs únicos
 - Swagger para documentação da API
-- Nodemon (desenvolvimento)
 
 ---
 
