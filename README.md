@@ -1,2 +1,19 @@
-# atividade-final-OO-umc
-Atividade Final OO é uma API REST em Node.js com SQLite que gerencia produtos e reservas. Suporta CRUD completo, controle de estoque, filtros, e documentação Swagger/Postman pronta, permitindo criar, listar, atualizar e reservar produtos de forma prática e organizada.
+# Backend Brechó - Versão OO
+
+Estrutura orientada a objetos com classes para Models, Repositories, Services e Controllers.
+
+## Como rodar
+
+1. npm install
+2. npm start
+
+Endpoints:
+- POST /produtos
+- GET /produtos
+- GET /produtos/:id
+- PUT /produtos/:id
+- DELETE /produtos/:id
+
+- POST /reservas
+- GET /reservas
+- DELETE /reservas/:id
