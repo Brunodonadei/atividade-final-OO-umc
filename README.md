@@ -45,7 +45,6 @@ src/
 └── server.js # Arquivo principal
 ```
 
-
 ---
 
 ## Instalação e Execução
@@ -68,12 +67,13 @@ npm install
 ```
 npm start
 ```
-Servidor rodando em: http://localhost:3000
 
+Servidor rodando em: http://localhost:3000
 
 ## Documentação da API
 
 A documentação completa está disponível via Swagger em:
+
 ```
 http://localhost:3000/api-docs
 ```
@@ -93,6 +93,7 @@ http://localhost:3000/api-docs
 | PATCH  | `/produtos/:id/stock/add` | Incrementa ou decrementa o stock                      |
 
 Exemplo de payload (criar produto):
+
 ```json
 {
   "code": "#P101",
@@ -112,6 +113,7 @@ Exemplo de payload (criar produto):
 | DELETE | `/reservas/:id` | Remove uma reserva      |
 
 Exemplo de payload (criar reserva):
+
 ```json
 {
   "product_code": "#P101",
@@ -121,8 +123,8 @@ Exemplo de payload (criar reserva):
 }
 ```
 
-
 ### Regras importantes:
+
 - A reserva não pode exceder o estoque disponível
 - Ao criar uma reserva, o estoque do produto é decrementado automaticamente
 - Ao remover uma reserva, o estoque do produto é incrementado de volta
@@ -143,8 +145,8 @@ Exemplo de payload (criar reserva):
 }
 ```
 
-
 ### Reserva
+
 ```json
 {
   "id": "uuid",
@@ -156,8 +158,45 @@ Exemplo de payload (criar reserva):
 }
 ```
 
+## Utilizando Docker
+
+Caso você não queira instalar Node.js e dependências localmente, é possível rodar a aplicação usando Docker.
+
+### Pré-requisitos
+
+- Docker instalado ([Windows, Mac ou Linux](https://docs.docker.com/get-docker/))
+- (Opcional) Docker Compose
+
+### Passos
+
+1. Build da imagem Docker:
+
+```bash
+docker build -t backend-oo .
+```
+
+2. Rodar o container:
+
+```bash
+docker run -p 3000:3000 backend-oo
+```
+
+3. Acesse a aplicação:
+
+```bash
+http://localhost:3000
+```
+
+## Observações
+
+- O node_modules será instalado dentro do container automaticamente.
+- O SQLite será criado dentro do container no diretório /app/src/data.
+- Para parar o container, use docker ps para listar e docker stop <container_id> para parar.
+
 ## Testes
+
 Para testar a API, você pode usar Postman ou qualquer cliente HTTP. Todos os endpoints estão documentados via Swagger.
 
 ## Licença
+
 Projeto open-source.
